@@ -24,9 +24,6 @@ img {
   top: calc(var(--navbar-height) + 25px);
   position: relative;
   z-index: 50;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 .attribution {
   background-color: var(--color3);
