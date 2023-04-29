@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-export default function Timer({ isActive }) {
-    const [time, setTime] = useState(0);
+export default function Timer({ isInactive, time, setTime }) {
+    // const [time, setTime] = useState(0);
     const [seconds, setSeconds] = useState(0);
     const [minutes, setMinutes] = useState(0);
     const [hours, setHours] = useState(0);
     let interval = null;
     useEffect(() => {
-        if (!isActive) {
+        if (!isInactive) {
             interval = setInterval(() => {
                 setTime((time) => time + 1);
               }, 1000);
@@ -16,7 +16,7 @@ export default function Timer({ isActive }) {
         return () => {
             clearInterval(interval);
         }
-    }, [isActive]);
+    }, [isInactive]);
 
     useEffect(() => {
         if (time !== 0) {

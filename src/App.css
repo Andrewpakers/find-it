@@ -15,6 +15,7 @@ body {
   height: 100%;
   margin: 0px;
   padding: 0px;
+  background-color: var(--color1);
 }
 img {
   display: block;
@@ -23,6 +24,15 @@ img {
   top: calc(var(--navbar-height) + 25px);
   position: relative;
   z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.attribution {
+  background-color: var(--color3);
+  padding: 5px;
+  border-radius: 3px;
+  margin-top: 5px;
 }
 .navbar {
   background-color: var(--color3);
@@ -90,7 +100,7 @@ button:active {
   align-items: center;
 }
 .menu {
-  height: 100px;
+  height: fit-content;
   width: 100px;
   background-color: var(--color3);
   border: 3px solid var(--color1);
@@ -126,7 +136,7 @@ Button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  height: fit-content;
   width: 300px;
   gap: 10px;
   background-color: var(--color3);
